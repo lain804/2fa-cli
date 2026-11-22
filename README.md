@@ -4,12 +4,12 @@ Generate time-based two-factor authentication (TOTP) codes from your terminal.
 
 ## Install
 
-Requires Python 3.14 or newer. Run one of these from the repository root.
+Requires Git and Python 3.14 or newer. Run either command from any directory to install `2fa` directly from GitHub.
 
 ```sh
-python -m pip install .
+python -m pip install git+https://github.com/lain804/2fa-cli.git
 # or
-uv tool install .
+uv tool install git+https://github.com/lain804/2fa-cli.git
 ```
 
 If your shell can’t find `2fa` after installing with uv, run `uv tool update-shell` and reopen your terminal.
@@ -19,6 +19,7 @@ If your shell can’t find `2fa` after installing with uv, run `uv tool update-s
 Replace `BASE32_SECRET` with the setup key from your account.
 
 ```sh
+2fa get BASE32_SECRET
 2fa add example BASE32_SECRET
 2fa get example
 2fa list
@@ -26,4 +27,5 @@ Replace `BASE32_SECRET` with the setup key from your account.
 ```
 
 Secrets are NOT encrypted 
-They database is stored in `~/.2fa-cli/secrets.db`.
+
+The database is stored in `~/.2fa-cli/secrets.db`.
