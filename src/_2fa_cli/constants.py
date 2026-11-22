@@ -1,0 +1,9 @@
+from pathlib import Path
+
+DEFAULT_INTERVAL = 30
+DEFAULT_DIGITS = 6
+DATABASE_FOLDER = Path.home() / ".2fa-cli"
+DEFAULT_DATABASE_NAME = "secrets.db"
+MINIMUM_SECRET_LENGTH = 80
+EXIT_SUCCESS = 0
+EXIT_FAILURE = 1

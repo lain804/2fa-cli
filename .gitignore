@@ -1,0 +1,11 @@
+*
+
+!/.gitignore
+!/.python-version
+!/README.md
+!/pyproject.toml
+!/uv.lock
+
+!/src/
+!/src/**/
+!/src/**/*.py

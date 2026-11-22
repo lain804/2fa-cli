@@ -1,0 +1,1 @@
+from _2fa_cli.cli import main

@@ -1,0 +1,24 @@
+[project]
+name = "2fa-cli"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "lain", email = "lain@lain" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "copykitten>=2.1.0",
+    "loguru>=0.8.0",
+    "pyotp>=2.12.1",
+]
+
+[project.scripts]
+2fa = "_2fa_cli:main"
+
+[tool.uv.build-backend]
+module-name = "_2fa_cli"
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"

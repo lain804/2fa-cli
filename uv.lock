@@ -1,0 +1,73 @@
+version = 1
+revision = 5
+requires-python = ">=3.14"
+
+[[package]]
+name = "2fa-cli"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "copykitten" },
+    { name = "loguru" },
+    { name = "pyotp" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "copykitten", specifier = ">=2.1.0" },
+    { name = "loguru", specifier = ">=0.8.0" },
+    { name = "pyotp", specifier = ">=2.12.1" },
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697, upload-time = "2022-10-25T02:36:22.414Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335, upload-time = "2022-10-25T02:36:20.889Z" },
+]
+
+[[package]]
+name = "copykitten"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f6/30/42e13b353e3f989da8b9e2a8232cc03e77e00897282b8b6cbfa171c6a2f8/copykitten-2.1.0.tar.gz", hash = "sha256:7cb4c8f86f175d8ea91cac283a4c2ca507b5631d799209e2d1ba4fa35f9e9578", size = 21234, upload-time = "2026-10-15T21:06:30.234Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/35/73/fa2aa87b962b75d65924c5e0392d897aefa446597c3b6dc70158177a681f/copykitten-2.1.0-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:e13809dc131c388944058f5e6093bcd9d01ed50d804e2b93449c065dc82c656a", size = 400964, upload-time = "2026-10-15T21:06:23.237Z" },
+    { url = "https://files.pythonhosted.org/packages/8a/8e/355f7d0d70d71da0c2ae0176939916cff889808b39a34aea530e71950e6e/copykitten-2.1.0-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:a5c6aeb63274c3a60eed978d72c9e6ba2ff9099b92f86a964edf81f44abfb877", size = 388340, upload-time = "2026-10-15T21:06:24.771Z" },
+    { url = "https://files.pythonhosted.org/packages/e4/b8/bbe24c0f73dd8727afee1497b2e04a1bd5aeda56315153a85ae6032f19ac/copykitten-2.1.0-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a81fe3239354c52338af05d58ff2651e24efa1bcc14ed92e683a465a45c7ced1", size = 485707, upload-time = "2026-10-15T21:06:26.383Z" },
+    { url = "https://files.pythonhosted.org/packages/98/cf/8119fc85b0a03909eb0b265deeb2351893ef1ef7326e7ee55b1e2d6d1242/copykitten-2.1.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e1030c84a72dd4453b4c793e3f5ad86983e06754f4b1549ac65c5e006373200d", size = 523991, upload-time = "2026-10-15T21:06:27.729Z" },
+    { url = "https://files.pythonhosted.org/packages/80/ea/00378998fa1254054a2a8efc7055cf981c5086fe78b9882a9d94018bdfd8/copykitten-2.1.0-cp38-abi3-win_amd64.whl", hash = "sha256:05563cfdb7bbc95c57cd77a859cb81fa737562022862699ee26fff25acfa78df", size = 290222, upload-time = "2026-10-15T21:06:29.047Z" },
+]
+
+[[package]]
+name = "loguru"
+version = "0.8.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "win32-setctime", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/61/ce/b5bb93d4d9fc7a067f69140b3bb3782f6ad6360bc76e99b6e3d386cb1320/loguru-0.8.0.tar.gz", hash = "sha256:fb3e4623288e37700a0577f6e0ce776cc1860b5d95c657d67f07a2476b304867", size = 71232, upload-time = "2026-11-11T18:50:26.248Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c8/00/9ee7c8da7342b1a5524bca9d036f89e7d1d1e5a6345c9623763eeeac941f/loguru-0.8.0-py3-none-any.whl", hash = "sha256:e0fba09d6f76ba2d2f4bd1757122942f5a670c702e988b5efaeab99dacba0069", size = 69409, upload-time = "2026-11-11T18:50:24.148Z" },
+]
+
+[[package]]
+name = "pyotp"
+version = "2.12.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/70/d7/fe43d6cfd1e80081a374c612df6b6555205a7ab761fdd6ba6e30435fd963/pyotp-2.12.1.tar.gz", hash = "sha256:8d0c4192f3c5d1b1a8792df23b9d8acbb7e70abd2b160962af55c5700edbd236", size = 27480, upload-time = "2026-11-19T05:06:24.189Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/32/d5/ca399f55b474357c42b8d0ee1c0222a22e6f88bbf4588130b75737c3b73b/pyotp-2.12.1-py3-none-any.whl", hash = "sha256:2f65978d0a0afe5588ec960c810cbb974ba1957ffbf29775d8d4e1b2d4b8984c", size = 17026, upload-time = "2026-11-19T05:06:22.922Z" },
+]
+
+[[package]]
+name = "win32-setctime"
+version = "1.2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1a/e4/f0f252c65f9bf7c4042b1f707ef338d49f799da582234e1d3e6e2cfca291/win32_setctime-1.2.1.tar.gz", hash = "sha256:077b35471bf1ff1d71e165c919ddc0cecf51b8e1802f5d820d33a96e2f6717dd", size = 4983, upload-time = "2026-10-25T18:21:32.318Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bd/df/5593480bc1e932eeae28e4fa182ab68174edd0d77409ced3b6491d02d1d5/win32_setctime-1.2.1-py3-none-any.whl", hash = "sha256:a9edc685b35414bec69392c866ed82456ad125ac4a6a4b703ec1d8b462d4f477", size = 4215, upload-time = "2026-10-25T18:21:30.939Z" },
+]
