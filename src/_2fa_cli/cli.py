@@ -25,9 +25,9 @@ def main():
     )
 
     for current_parser in [parser, base]:
-        current_parser.add_argument("--interval", "-i", type=float)
-        current_parser.add_argument("--digits", "-d", type=int)
-        current_parser.add_argument("--copy", "-c", action="store_true")
+        current_parser.add_argument("--interval", "-i", type=float, help=f"How often the code is rotated ({DEFAULT_INTERVAL} by default)")
+        current_parser.add_argument("--digits", "-d", type=int, help=f"Generate this many digits ({DEFAULT_DIGITS} by default)")
+        current_parser.add_argument("--copy", "-c", action="store_true", help="Copy code to clipboard")
 
     parser.set_defaults(
         interval=DEFAULT_INTERVAL,
@@ -59,7 +59,7 @@ def main():
     list_codes = commands.add_parser("list",aliases=["ls"], parents=[base])
     list_codes.set_defaults(command="list")
 
-    list_codes.add_argument("--show-codes", action="store_true", default=False)
+    list_codes.add_argument("--show-codes", action="store_true", default=False, help="Show codes next to aliases")
 
     db = Database()
 
